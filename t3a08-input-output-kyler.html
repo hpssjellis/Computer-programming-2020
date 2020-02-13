@@ -1,0 +1,72 @@
+<h1 align=left>T3A08-Input-output-kyler.html</h1>
+<input type=button value=move onClick="{
+  document.getElementById('myImg01').style.left =
+	parseInt(document.getElementById('myImg01').style.left) + 10
+}"><br>
+<img id="myImg01" width=100 src=""
+style="position:relative; left:0; top:0"><br>
+
+First name: <input id="first_name">
+Last name: <input id="last_name">
+<button id="say">Say hi!</button>
+ 
+<hr>
+<div id="result"></div>
+ 
+<script>
+function say_hi() {
+    var fname = document.getElementById('first_name').value;
+    var lname = document.getElementById('last_name').value;
+ 
+    var html = 'Hello <b>' + fname + '</b> ' + lname;
+ 
+    document.getElementById('result').innerHTML = html;
+}
+ 
+document.getElementById('say').addEventListener('click', say_hi);
+</script>
+
+<br><br>
+
+<input id="myText01" type=text value="Kyler">
+<input type="button" value="Show 1" onclick=
+ document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value}">
+<div id="myDiv01">...</div>
+
+<br>
+
+
+
+<SCRIPT language=JavaScript>
+<!--
+
+
+
+function perc1() {
+ a = document.form1.a.value/100;
+ b = a*document.form1.b.value;
+ document.form1.total1.value = b
+ }
+function perc2() {
+ a = document.form1.c.value;
+ b = document.form1.d.value;
+ c = a/b;
+ d = c*100;
+ document.form1.total2.value = d
+ }
+//-->
+</SCRIPT>
+
+<FORM name=form1 method="post">
+<TABLE cellSpacing=1 cellPadding=1 border=1>
+  <TBODY>
+  <TR>
+    <TD align=middle colSpan=3><B><FONT size=4>Divedend Amount Per Share Calculator </FONT></B> 
+      </TD>
+  <TR>
+    <TD>What is Div Yield% <INPUT size=5 name=a> Price Per Share <INPUT size=5 name=b>?</TD>
+    <TD>Amount per Share: $<INPUT maxLength=40 size=5 name=total1></TD>
+    <TD><INPUT onclick=perc1() type=button value=Calculate></TD>
+ 
+    <TD align=middle 
+colSpan=3><INPUT type=reset value=Reset></TD></TR></TBODY></TABLE></FORM>
