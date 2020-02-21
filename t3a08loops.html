@@ -1,0 +1,36 @@
+<h1 align=center>T3A08 Loops By Kyler</h1>
+
+<input id="myText01" type=text value="20">
+
+<input type="button" value="Loop" onclick="{ document.getElementById('myDiv01').innerHTML +=''
+
+for (myX=0; myX <= document.getElementById('myText01').value; myX++){
+ document.getElementById('myDiv01').innerHTML += '<br>Loop #:' + myX
+
+ if (myX == 5){
+   document.getElementById('myDiv01').innerHTML +=', Wow a five'
+ }
+
+ if (myX == 3){
+   document.getElementById('myDiv01').innerHTML +=', Wow a three'
+}
+
+ if (myX == 8){
+   document.getElementById('myDiv01').innerHTML +=', Wow a eight'
+}
+
+ if (myX >= 10){
+   document.getElementById('myDiv01').innerHTML +=', Wow greater than nine'
+}
+
+ if (myX == 9){
+   document.getElementById('myDiv01').innerHTML +=', Wow a nine'
+}
+
+
+}
+
+}">
+
+<div id="myDiv01">...</div>
+
