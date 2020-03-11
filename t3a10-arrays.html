@@ -24,4 +24,23 @@ document.getElementById('myText01').value
 
 }"><br>
 
+
+
+<input id="myText01" type=text value="Nissan"><br>
+<input id="myText02" type=text value="Tesla"><br>
+<input id="myText03" type=text value="Ford"><br>
+
+<input type="button" value="Array Set" onclick="{
+
+	document.getElementById('myDiv01').innerHTML = '<br>myText01 = '+
+document.getElementById('myText01').value
+
+}">
+
+<input type="button" value="Array Show" onclick="{
+
+  document.getElementById('myDiv01').innerHTML = 'myArray[0] = '+myArray[0]
+
+}"><br>
+
 <div id="myDiv01">...</div>
