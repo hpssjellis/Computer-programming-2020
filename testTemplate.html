@@ -160,7 +160,8 @@ function myCheckHit(){
     if (myNext){
       if (transcript.indexOf('up') >= 1){ 
          myNext = false
-        document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
+        console.log('up')
+        document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 10 + 'px'
         myCheckHit()     // checks for all collisions
       }
     }
