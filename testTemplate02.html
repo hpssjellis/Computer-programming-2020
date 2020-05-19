@@ -118,7 +118,7 @@ function myCheckHit(){
 
 
 
-  <div id="myDiv02">...</div>
+  <div id="myDiv02" font="yellow">...</div>
   
   
   
@@ -140,6 +140,9 @@ function myCheckHit(){
 <script>
   
   let myNext = true
+  let myTimerRight
+  
+  
   
   window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
@@ -157,6 +160,9 @@ function myCheckHit(){
       .map(result => result.transcript)
       .join('');
 
+    
+    
+    
     if (myNext){
       if (transcript.indexOf('up') >= 1){ 
          myNext = false
@@ -165,6 +171,24 @@ function myCheckHit(){
         myCheckHit()     // checks for all collisions
       }
     }
+    
+    
+    if (myNext){
+      if (transcript.indexOf('right') >= 1){ 
+         myNext = false
+         console.log('right')  
+         clearInterval(myTimerRight)
+         myTimerRight = setInterval(function(){
+           document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
+           myCheckHit()     // checks for all collisions
+        }, 50)
+      }
+    }
+        
+
+
+    
+    
     
       const poopScript = transcript.replace(/poop|poo|shit|dump/gi, '💩');
       p.textContent = poopScript;
