@@ -169,6 +169,7 @@ function myCheckHit(){
         clearInterval(myTimerRight)
         console.log('up')
         document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 10 + 'px'
+        document.getElementById('myDiv02').innerHTML = transcript
         myCheckHit()     // checks for all collisions
       }
     }
@@ -181,6 +182,7 @@ function myCheckHit(){
          clearInterval(myTimerRight)
          myTimerRight = setInterval(function(){
            document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
+           document.getElementById('myDiv02').innerHTML = transcript
            myCheckHit()     // checks for all collisions
         }, 50)
       }
@@ -197,7 +199,7 @@ function myCheckHit(){
       if (e.results[0].isFinal) {
         p = document.createElement('p');
         words.appendChild(p);
-        document.getElementById('myDiv02').innerHTML = transcript
+    //    document.getElementById('myDiv02').innerHTML = transcript
         myNext = true
       }
   });
