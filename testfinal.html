@@ -26,6 +26,9 @@
       .map(result => result.transcript)
       .join('');
 
+    
+      if (transcript.contain('up')){ alert('up')}
+    
       const poopScript = transcript.replace(/poop|poo|shit|dump/gi, '💩');
       p.textContent = poopScript;
 
