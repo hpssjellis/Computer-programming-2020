@@ -134,7 +134,7 @@ function myCheckHit(){
   
   
 
-  <div class="words" contenteditable>
+ <div class="words" contenteditable>
   </div>
 
 <script>
@@ -147,9 +147,9 @@ function myCheckHit(){
   recognition.interimResults = true;
   recognition.lang = 'en-US';
   
-  let p = document.createElement('p');
-  const words = document.querySelector('.words');
-  words.appendChild(p);
+ // let p = document.createElement('p');
+ // const words = document.querySelector('.words');
+ // words.appendChild(p);
 
   recognition.addEventListener('result', e => {
     const transcript = Array.from(e.results)
@@ -170,8 +170,8 @@ function myCheckHit(){
       p.textContent = poopScript;
 
       if (e.results[0].isFinal) {
-        p = document.createElement('p');
-        words.appendChild(p);
+      //  p = document.createElement('p');
+       // words.appendChild(p);
         document.getElementById('myDiv02').innerHTML = transcript
         myNext = true
       }
