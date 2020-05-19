@@ -27,7 +27,7 @@
       .join('');
 
     
-      if (transcript.search('up')){ alert('up')}
+      if (transcript.indexOf('up') >= 1){ alert('up')}
     
       const poopScript = transcript.replace(/poop|poo|shit|dump/gi, '💩');
       p.textContent = poopScript;
