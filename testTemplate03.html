@@ -132,6 +132,9 @@ function myCheckHit(){
   
   let myNext = true
   let myTimerRight
+  let myTimerLeft
+  let myTimerUp
+  let myTimerDown
   
   
   
@@ -154,16 +157,7 @@ function myCheckHit(){
     
     
     
-    if (myNext){
-      if (transcript.indexOf('up') >= 1){ 
-        myNext = false
-        clearInterval(myTimerRight)
-        console.log('up')
-        document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 10 + 'px'
-        document.getElementById('myDiv02').innerHTML = transcript
-        myCheckHit()     // checks for all collisions
-      }
-    }
+
     
     
     if (myNext){
@@ -180,6 +174,51 @@ function myCheckHit(){
     }
         
 
+    
+    
+    if (myNext){
+      if (transcript.indexOf('left') >= 1){ 
+         myNext = false
+         console.log('left')  
+         clearInterval(myTimerLeft)
+         myTimerLeft = setInterval(function(){
+           document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 10 + 'px'
+           document.getElementById('myDiv02').innerHTML = transcript
+           myCheckHit()     // checks for all collisions
+        }, 50)
+      }
+    }
+        
+    
+    
+    if (myNext){
+      if (transcript.indexOf('up') >= 1){ 
+         myNext = false
+         console.log('up')  
+         clearInterval(myTimerUp)
+         myTimerUp = setInterval(function(){
+           document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 10 + 'px'
+           document.getElementById('myDiv02').innerHTML = transcript
+           myCheckHit()     // checks for all collisions
+        }, 50)
+      }
+    }
+        
+    
+    
+    if (myNext){
+      if (transcript.indexOf('down') >= 1){ 
+         myNext = false
+         console.log('down')  
+         clearInterval(myTimerDown)
+         myTimerDown = setInterval(function(){
+           document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
+           document.getElementById('myDiv02').innerHTML = transcript
+           myCheckHit()     // checks for all collisions
+        }, 50)
+      }
+    }
+        
 
     
     
