@@ -165,6 +165,9 @@ function myCheckHit(){
          myNext = false
          console.log('right')  
          clearInterval(myTimerRight)
+         clearInterval(myTimerLeft)
+         clearInterval(myTimerUp)
+         clearInterval(myTimerDown)
          myTimerRight = setInterval(function(){
            document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
            document.getElementById('myDiv02').innerHTML = transcript
@@ -180,7 +183,10 @@ function myCheckHit(){
       if (transcript.indexOf('left') >= 1){ 
          myNext = false
          console.log('left')  
+         clearInterval(myTimerRight)
          clearInterval(myTimerLeft)
+         clearInterval(myTimerUp)
+         clearInterval(myTimerDown)
          myTimerLeft = setInterval(function(){
            document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 10 + 'px'
            document.getElementById('myDiv02').innerHTML = transcript
@@ -195,7 +201,10 @@ function myCheckHit(){
       if (transcript.indexOf('up') >= 1){ 
          myNext = false
          console.log('up')  
+         clearInterval(myTimerRight)
+         clearInterval(myTimerLeft)
          clearInterval(myTimerUp)
+         clearInterval(myTimerDown)
          myTimerUp = setInterval(function(){
            document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 10 + 'px'
            document.getElementById('myDiv02').innerHTML = transcript
@@ -210,6 +219,9 @@ function myCheckHit(){
       if (transcript.indexOf('down') >= 1){ 
          myNext = false
          console.log('down')  
+         clearInterval(myTimerRight)
+         clearInterval(myTimerLeft)
+         clearInterval(myTimerUp)
          clearInterval(myTimerDown)
          myTimerDown = setInterval(function(){
            document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
